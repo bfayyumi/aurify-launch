@@ -15,8 +15,6 @@ nav a { text-decoration: none; }
 p { margin: 0 0 18px; }
 .intro { padding: 76px 0 65px; max-width: 710px; animation: arrive 420ms ease-out both; }
 @keyframes arrive { from { opacity: .55; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-.status { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 13px; margin-bottom: 24px; }
-.status span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #647b4c; flex: 0 0 auto; }
 h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; text-wrap: balance; }
 h1 { font-size: clamp(43px, 6.8vw, 67px); line-height: 1.1; letter-spacing: -2px; margin: 0 0 29px; }
 .lead { font-size: 21px; line-height: 1.6; margin-bottom: 19px; }
@@ -60,6 +58,6 @@ footer p:first-child { margin-right: auto; }
   .contact { padding-bottom: 42px; }
   footer { gap: 16px; flex-wrap: wrap; }
 }
-@media (max-width: 370px) { header { align-items: flex-start; flex-direction: column; } nav { gap: 22px; } .status { font-size: 12px; } }
+@media (max-width: 370px) { header { align-items: flex-start; flex-direction: column; } nav { gap: 22px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .intro { animation: none; } .brand img { transition: none; } .brand:hover img { transform: none; } }
 @media print { body { background: white; font-size: 11pt; } .page { width: 100%; } header, .intro, .section { padding: 15px 0; } nav, .skip-link, .privacy { display: none; } h1 { font-size: 30pt; } h2 { font-size: 20pt; } .services > div { break-inside: avoid; } }
