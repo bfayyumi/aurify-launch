@@ -2,7 +2,7 @@
 
 A simple, static one-page introduction to Aurify. Plain HTML and CSS, with no build step, JavaScript, external fonts, analytics, or forms. Contact: **hi@getaurify.com**.
 
-The page covers the five planned services, intended Claude API use, human review, upcoming packages, development status, and contact details. Claude features are described as planned, and prices have not been announced. There are no invented client results or testimonials.
+The page introduces AI agents for local businesses, starting with home-service teams: inbound lead responses, qualification, follow-ups, customer reactivation, appointment booking, and CRM context. It explains intended Claude API use, owner review, upcoming packages, development status, contact details, and supporting local-growth services. Claude features are described as planned, and prices have not been announced. There are no invented client results or testimonials. Subtle CSS entrance and hover motion respect reduced-motion preferences.
 
 ## Preview locally
 
@@ -10,7 +10,7 @@ From this directory, run `python3 -m http.server 5182 --bind 127.0.0.1`, then op
 
 ## GitHub Pages
 
-Publish the root of the `main` branch. No build is required; `.nojekyll` disables Jekyll processing. Changes pushed to `main` update the website.
+GitHub Pages publishes the root of the `main` branch at https://getaurify.com/. The custom domain is configured, its DNS points to GitHub Pages, and HTTPS is enforced. No build is required; `.nojekyll` disables Jekyll processing. Changes pushed to `main` update the website.
 
 ## Connect getaurify.com
 

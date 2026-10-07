@@ -1,6 +1,6 @@
 :root { color-scheme: light; --paper: #faf9f4; --ink: #253b30; --muted: #56635a; --line: #dcded3; --yellow: #f3c64d; }
 * { box-sizing: border-box; }
-html { scroll-padding-top: 28px; }
+html { scroll-padding-top: 28px; scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
 .page { width: min(860px, calc(100% - 64px)); margin: 0 auto; }
 a { color: inherit; text-underline-offset: 5px; text-decoration-thickness: 1px; }
@@ -8,11 +8,13 @@ a:hover { text-decoration: underline; }
 a:focus-visible, summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 5px; border-radius: 2px; }
 header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 32px 0; border-bottom: 1px solid var(--line); }
 .brand { display: inline-flex; align-items: center; gap: 11px; font-weight: 650; font-size: 25px; line-height: 1; letter-spacing: -.7px; text-decoration: none; }
-.brand img { display: block; }
+.brand img { display: block; transition: transform 180ms ease; }
+.brand:hover img { transform: rotate(-10deg); }
 nav { display: flex; flex-wrap: wrap; gap: 25px; font-size: 14px; }
 nav a { text-decoration: none; }
 p { margin: 0 0 18px; }
-.intro { padding: 76px 0 65px; max-width: 710px; }
+.intro { padding: 76px 0 65px; max-width: 710px; animation: arrive 420ms ease-out both; }
+@keyframes arrive { from { opacity: .55; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 .status { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 13px; margin-bottom: 24px; }
 .status span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #647b4c; flex: 0 0 auto; }
 h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; text-wrap: balance; }
@@ -25,12 +27,18 @@ h1 { font-size: clamp(43px, 6.8vw, 67px); line-height: 1.1; letter-spacing: -2px
 h2 { margin: 0 0 23px; font-size: clamp(29px, 4.2vw, 37px); line-height: 1.2; letter-spacing: -.65px; }
 dl { margin: 30px 0 0; }
 .services > div { display: grid; grid-template-columns: 245px minmax(0, 1fr); gap: 25px; padding: 23px 0; border-top: 1px solid var(--line); }
+.supporting-services { margin: 24px 0 0; }
 dt { font-weight: 600; font-size: 16px; }
 .number { font-weight: 400; color: var(--muted); font-size: 12px; margin-right: 16px; }
 dd { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.7; }
 .development-note { border-left: 3px solid var(--yellow); padding: 3px 0 3px 22px; margin: 28px 0 0; max-width: 705px; font-size: 15px; }
 .development-note strong { font-weight: 600; }
 .development-note p { margin: 6px 0 0; color: var(--muted); }
+.workflow-example { margin: 28px 0 0; max-width: 715px; }
+.workflow-example h3 { font-size: 16px; font-weight: 600; margin: 0 0 3px; }
+.workflow-example .small { margin-bottom: 10px; }
+.workflow-example ol { margin: 0; padding-left: 23px; font-size: 15px; color: var(--muted); }
+.workflow-example li { padding-left: 5px; margin-bottom: 10px; }
 .plans > div { display: grid; grid-template-columns: 100px minmax(0, 1fr) 150px; gap: 20px; padding: 20px 0; border-top: 1px solid var(--line); }
 .plan-status { font-size: 12px; padding-top: 3px; text-align: right; }
 .small { color: var(--muted); font-size: 13px; line-height: 1.7; }
@@ -68,4 +76,5 @@ footer p:first-child { margin-right: auto; }
   footer { gap: 16px; flex-wrap: wrap; }
 }
 @media (max-width: 370px) { header { align-items: flex-start; flex-direction: column; } nav { gap: 22px; } .status { font-size: 12px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .intro { animation: none; } .brand img { transition: none; } .brand:hover img { transform: none; } }
 @media print { body { background: white; font-size: 11pt; } .page { width: 100%; } header, .intro, .section { padding: 15px 0; } nav, .skip-link, .privacy { display: none; } h1 { font-size: 30pt; } h2 { font-size: 20pt; } .services > div { break-inside: avoid; } }
