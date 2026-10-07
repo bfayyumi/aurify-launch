@@ -1,20 +1,29 @@
-# Aurify — one-page website
+# Aurify — product website
 
-A simple, static one-page introduction to Aurify. Plain HTML and CSS, with no build step, JavaScript, external fonts, analytics, or forms. Contact: **hi@getaurify.com**.
+A static website for Aurify, operated by **Getaurify Inc.** HTML and CSS only; no build step, client JavaScript, external fonts, analytics, or forms.
 
-The page introduces AI agents for local businesses, starting with home-service teams: inbound lead responses, qualification, follow-ups, customer reactivation, appointment booking, and CRM context. It explains the Claude-based design, owner review, contact details, and supporting local-growth services. It describes the intended architecture without claiming live deployments or inventing client results or testimonials. Subtle CSS entrance and hover motion respect reduced-motion preferences.
+## Content
 
-## Preview locally
+- AI front office for home-service businesses, with Claude at the core.
+- Clearly labeled product preview using fictional sample data, not a real screenshot.
+- Connected lead response, qualification, follow-up, reactivation, booking, and CRM workflow.
+- Claude architecture diagram, integration categories, and business-defined approvals.
+- Demo requests go by email to hi@getaurify.com; no calendar booking is simulated.
+- Dedicated privacy and website/service information pages.
 
-From this directory, run `python3 -m http.server 5182 --bind 127.0.0.1`, then open http://127.0.0.1:5182.
+The owner confirmed on October 7, 2026 that the Claude integration is working for a few while being built and updated. The copy says “Built on Claude” without claiming a customer count, named live integrations, results, or endorsement. The interface remains a concept, not product evidence.
 
-## GitHub Pages
+## Files and preview
 
-GitHub Pages publishes the root of the `main` branch at https://getaurify.com/. The custom domain is configured, its DNS points to GitHub Pages, and HTTPS is enforced. No build is required; `.nojekyll` disables Jekyll processing. Changes pushed to `main` update the website.
+`index.html` is the homepage. `privacy.html` and `terms.html` contain public website policies. `style.css` holds shared responsive styling and reduced-motion rules. `social-card.png` is a 1200×630 social preview. `robots.txt`, `sitemap.xml`, and `CNAME` configure crawling and the domain.
 
-## Connect getaurify.com
+Run `python3 -m http.server 5182 --bind 127.0.0.1` from this directory, then open http://127.0.0.1:5182.
 
-In the domain provider's DNS settings, point the apex domain (`@`) to GitHub Pages using these four A records:
+## Hosting
+
+GitHub Pages publishes the root of `main` at https://getaurify.com/. HTTPS is enforced. `.nojekyll` disables Jekyll processing. Pushes to `main` deploy the website.
+
+The domain currently uses these GitHub Pages records. Preserve unrelated email and verification records if changing DNS:
 
 | Type | Name | Value |
 | --- | --- | --- |
@@ -24,10 +33,4 @@ In the domain provider's DNS settings, point the apex domain (`@`) to GitHub Pag
 | A | @ | 185.199.111.153 |
 | CNAME | www | bfayyumi.github.io |
 
-Remove only conflicting website A/AAAA/CNAME records; preserve email MX, SPF, DKIM, DMARC, and other unrelated records. `www` points to the account host, without a repository path.
-
-After the DNS resolves, set the custom domain to `getaurify.com` in repository **Settings → Pages** (a root `CNAME` file contains that hostname). Enable **Enforce HTTPS** once GitHub has issued the certificate. DNS and certificate issuance can take time.
-
-Canonical metadata, the sitemap, and organization structured data already use https://getaurify.com/.
-
-Official setup: [GitHub Pages custom domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+[GitHub Pages custom domain documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
