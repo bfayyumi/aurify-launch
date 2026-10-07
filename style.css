@@ -31,20 +31,7 @@ dl { margin: 30px 0 0; }
 dt { font-weight: 600; font-size: 16px; }
 .number { font-weight: 400; color: var(--muted); font-size: 12px; margin-right: 16px; }
 dd { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.7; }
-.development-note { border-left: 3px solid var(--yellow); padding: 3px 0 3px 22px; margin: 28px 0 0; max-width: 705px; font-size: 15px; }
-.development-note strong { font-weight: 600; }
-.development-note p { margin: 6px 0 0; color: var(--muted); }
-.workflow-example { margin: 28px 0 0; max-width: 715px; }
-.workflow-example h3 { font-size: 16px; font-weight: 600; margin: 0 0 3px; }
-.workflow-example .small { margin-bottom: 10px; }
-.workflow-example ol { margin: 0; padding-left: 23px; font-size: 15px; color: var(--muted); }
-.workflow-example li { padding-left: 5px; margin-bottom: 10px; }
-.plans > div { display: grid; grid-template-columns: 100px minmax(0, 1fr) 150px; gap: 20px; padding: 20px 0; border-top: 1px solid var(--line); }
-.plan-status { font-size: 12px; padding-top: 3px; text-align: right; }
 .small { color: var(--muted); font-size: 13px; line-height: 1.7; }
-#pricing > .small { margin: 22px 0 0; }
-.about > p:not(.eyebrow):not(.founder) { font-size: 18px; }
-.founder { margin-bottom: 0; }
 .contact { padding: 48px 0 55px; }
 .email { display: inline-flex; gap: 24px; align-items: center; font-size: clamp(21px, 4vw, 27px); text-decoration: none; border-bottom: 3px solid var(--yellow); overflow-wrap: anywhere; margin: 4px 0 15px; }
 .contact .small { margin-bottom: 0; }
@@ -70,8 +57,6 @@ footer p:first-child { margin-right: auto; }
   .section { padding: 35px 0; }
   .services > div { grid-template-columns: 1fr; gap: 8px; padding: 20px 0; }
   .services dd { padding-left: 32px; }
-  .plans > div { grid-template-columns: 1fr; gap: 6px; padding: 20px 0; }
-  .plan-status { text-align: left; }
   .contact { padding-bottom: 42px; }
   footer { gap: 16px; flex-wrap: wrap; }
 }

@@ -2,7 +2,7 @@
 
 A simple, static one-page introduction to Aurify. Plain HTML and CSS, with no build step, JavaScript, external fonts, analytics, or forms. Contact: **hi@getaurify.com**.
 
-The page introduces AI agents for local businesses, starting with home-service teams: inbound lead responses, qualification, follow-ups, customer reactivation, appointment booking, and CRM context. It explains intended Claude API use, owner review, upcoming packages, development status, contact details, and supporting local-growth services. Claude features are described as planned, and prices have not been announced. There are no invented client results or testimonials. Subtle CSS entrance and hover motion respect reduced-motion preferences.
+The page introduces AI agents for local businesses, starting with home-service teams: inbound lead responses, qualification, follow-ups, customer reactivation, appointment booking, and CRM context. It explains intended Claude API use, owner review, development status, contact details, and supporting local-growth services. Claude features are described as planned. There are no invented client results or testimonials. Subtle CSS entrance and hover motion respect reduced-motion preferences.
 
 ## Preview locally
 
